@@ -9,37 +9,66 @@ interface BackgroundMusicProps {
 export function BackgroundMusic({ src }: BackgroundMusicProps) {
     const audioRef = useRef<HTMLAudioElement>(null);
     const [isPlaying, setIsPlaying] = useState(false);
+    const [needsInteraction, setNeedsInteraction] = useState(false);
 
     // Attempt autoplay on mount
     useEffect(() => {
         const audio = audioRef.current;
         if (!audio) return;
 
+        // Set volume
+        audio.volume = 0.5;
+
         // Try to play immediately
         const playAudio = async () => {
             try {
                 await audio.play();
+                setIsPlaying(true);
+                setNeedsInteraction(false);
             } catch {
+                // Autoplay was blocked - show that we need user interaction
+                setNeedsInteraction(true);
+                setIsPlaying(false);
+
                 // If blocked, try playing on first user interaction
                 const handleInteraction = () => {
-                    audio.play().catch(() => { });
+                    if (audio) {
+                        audio.play()
+                            .then(() => {
+                                setIsPlaying(true);
+                                setNeedsInteraction(false);
+                            })
+                            .catch(() => { });
+                    }
                     document.removeEventListener("click", handleInteraction);
                     document.removeEventListener("touchstart", handleInteraction);
+                    document.removeEventListener("keydown", handleInteraction);
                 };
-                document.addEventListener("click", handleInteraction);
-                document.addEventListener("touchstart", handleInteraction);
+                document.addEventListener("click", handleInteraction, { once: true });
+                document.addEventListener("touchstart", handleInteraction, { once: true });
+                document.addEventListener("keydown", handleInteraction, { once: true });
             }
         };
 
         playAudio();
-    }, []);
+
+        return () => {
+            // Cleanup listeners on unmount
+        };
+    }, [src]);
 
     const togglePlay = () => {
         if (audioRef.current) {
             if (isPlaying) {
                 audioRef.current.pause();
+                setIsPlaying(false);
             } else {
-                audioRef.current.play().catch(() => { });
+                audioRef.current.play()
+                    .then(() => {
+                        setIsPlaying(true);
+                        setNeedsInteraction(false);
+                    })
+                    .catch(() => { });
             }
         }
     };
@@ -50,8 +79,8 @@ export function BackgroundMusic({ src }: BackgroundMusicProps) {
                 ref={audioRef}
                 src={src}
                 loop
-                autoPlay
                 preload="auto"
+                playsInline
                 onPlay={() => setIsPlaying(true)}
                 onPause={() => setIsPlaying(false)}
             />
@@ -67,6 +96,7 @@ export function BackgroundMusic({ src }: BackgroundMusicProps) {
           text-white/70 hover:text-white
           transition-all duration-300
           hover:scale-110
+          ${needsInteraction ? "animate-bounce ring-2 ring-pink-400/50" : ""}
           ${isPlaying ? "animate-pulse-soft" : ""}
         `}
                 aria-label={isPlaying ? "Pausar música" : "Reproducir música"}
