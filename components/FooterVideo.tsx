@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { getAssetPath } from "@/lib/utils";
 
 interface FooterVideoProps {
     isUnlocked: boolean;
@@ -36,7 +37,7 @@ export function FooterVideo({ isUnlocked }: FooterVideoProps) {
                     <div className="relative w-full aspect-[9/16]">
                         <video
                             ref={videoRef}
-                            src="/Imagenes/8.mp4"
+                            src={getAssetPath("/Imagenes/8.mp4")}
                             autoPlay
                             muted
                             loop

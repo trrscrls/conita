@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import { getAssetPath } from "@/lib/utils";
 
 interface ImageGalleryProps {
     isUnlocked: boolean;
@@ -9,13 +10,13 @@ interface ImageGalleryProps {
 
 // Only images 1-7, video is separate
 const GALLERY_IMAGES = [
-    "/Imagenes/1.jpg",
-    "/Imagenes/2.jpg",
-    "/Imagenes/3.jpg",
-    "/Imagenes/4.JPG",
-    "/Imagenes/5.PNG",
-    "/Imagenes/6.png",
-    "/Imagenes/7.jpg",
+    getAssetPath("/Imagenes/1.jpg"),
+    getAssetPath("/Imagenes/2.jpg"),
+    getAssetPath("/Imagenes/3.jpg"),
+    getAssetPath("/Imagenes/4.JPG"),
+    getAssetPath("/Imagenes/5.PNG"),
+    getAssetPath("/Imagenes/6.png"),
+    getAssetPath("/Imagenes/7.jpg"),
 ];
 
 function FloatingImage({
