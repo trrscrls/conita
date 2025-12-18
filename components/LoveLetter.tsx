@@ -27,7 +27,7 @@ export function LoveLetter({ isUnlocked }: LoveLetterProps) {
 
                 <div className="text-white/90 text-base sm:text-lg md:text-xl leading-relaxed text-left space-y-6">
                     <p>
-                        Te quiero desear un feliz cumpleaños, estoy orgulloso de ti, por todo lo que has logrado, como puedes salir adelante a pesar de la adversidad, de los malos momentos y demás.
+                        Te quiero desear un feliz cumpleañito conita, estoy orgulloso de ti, por todo lo que has hecho, como puedes salir adelante a pesar de la adversidad, de los malos momentos y demás.
                     </p>
 
                     <p>
@@ -35,19 +35,19 @@ export function LoveLetter({ isUnlocked }: LoveLetterProps) {
                     </p>
 
                     <p>
-                        Te admiro mucho, sabes que cualquier cosa yo seré todo oído para escucharte, que te puedas desahogar, ser tu apoyo en los buenos y malos momentos, gracias por ayudarme cuando no me sentía bien, gracias por estar ahí conmigo, apoyándome y créeme, que si en algún momento no estés en mi vida, lo sentiré, créeme que eres muy importante para mí, gracias por ser tú.
+                        Te admiro mucho, sabes que cualquier cosa yo seré todo oídos para ti, para que te puedas desahogar, ser tu apoyo en los buenos y malos momentos, gracias por ayudarme cuando no me sentía bien, gracias por estar ahí conmigo, apoyándome y créeme, que si en algún momento no estés en mi vida, lo sentiré, créeme que eres muy importante para mí, gracias por ser tú :c.
                     </p>
 
                     <p>
-                        No puedo estar más agradecido de poder conocer a una personita tan linda como tú, ya que hoy en día es difícil encontrar a personas así.
+                        No puedo estar más agradecido de poder conocer a una personita tan linda, ya que hoy en día es difícil encontrar a personas como tú.
                     </p>
 
                     <p>
-                        Yo sé que tienes potencial, tienes claras tus metas, lo cual es increíble, porque sé que las podrás cumplir, ya que eres capaz de eso y más, eres capaz de poder hacer todo lo que te propongas.
+                        Yo sé que tienes potencial, en todo ámbito conita, tienes claras tus metas, lo cual es increíble, porque sé que las podrás cumplir, ya que eres capaz de eso y más, eres capaz de poder hacer todo lo que te propongas.
                     </p>
 
                     <p>
-                        Me haces sentir como un niño pequeño cuando estoy contigo, me haces sentirme vivo, me haces sentirme feliz, querido, etc. Ojalá que con este tiempo que llevamos juntos, yo haya podido, al menos una vez, hecho sentirte querida :(((, que al verte sonreír, me hace recordar como eras cuando chiquita.
+                        Me haces sentir como un niño pequeño cuando estoy contigo, me haces sentir vivo, me haces sentir feliz, querido. Ojalá que con este tiempo que llevamos juntos, yo haya podido, al menos una vez, hecho sentirte querida :(((, ya que al verte sonreír, puedo ver a una conita cuando chiquita.
                     </p>
 
                     <p>
@@ -55,11 +55,11 @@ export function LoveLetter({ isUnlocked }: LoveLetterProps) {
                     </p>
 
                     <p>
-                        Esta página web quedará acá, no la borraré hasta que se borre automáticamente, por lo que, espero que dure para siempre, si no, bueno, tendré que hacer otra nueva jeje.
+                        Esta página quedará acá, no la borraré, por lo que, espero que dure para siempre, si no, bueno, tendré que hacer otra nueva jeje.
                     </p>
 
                     <p>
-                        Fue un camino divertido hacer esta página, fue un trabajo arduo poder hacerla y que funcionara, pero valió la pena.
+                        Si quieres compartir o mostrar la pagina, yo no tengo drama. Fue un camino divertido hacer esta página, fue un trabajo divertido poder crearla y que funcionara, pero valió totalmente la pena &lt;3
                     </p>
 
                     <p className="italic text-white/70">
