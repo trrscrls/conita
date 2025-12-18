@@ -11,7 +11,7 @@ import { BackgroundMusic } from "@/components/BackgroundMusic";
 import { getAssetPath } from "@/lib/utils";
 
 // Target date: January 15, 2026 at 00:00 (user's local time)
-const TARGET_DATE = new Date(2026, 0, 15, 0, 0, 0);
+const TARGET_DATE = new Date(2024, 0, 15, 0, 0, 0);
 
 export default function Home() {
     const { timeLeft, isUnlocked, isLoading } = useCountdown(TARGET_DATE);
