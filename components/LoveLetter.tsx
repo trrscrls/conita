@@ -51,7 +51,7 @@ export function LoveLetter({ isUnlocked }: LoveLetterProps) {
                     </p>
 
                     <p>
-                        Quise salir de lo convencional para darte este regalito, ya que, siempre te decía que programaba pero no te quería decir qué era, bueno, esta es una de las cositas que hacía pero obviamente no te podía contar jejeje, espero que te haya gustado este detalle, que espero, haya sido de tu agrado y que al menos, pude haberte sacado una sonrisita, que es lo que más me gusta :c, me gusta tu sonrisa llena de emociones, que puedes demostrar tanto con esos ojitos especiales que tienes.
+                        Quise salir de lo convencional para darte este regalito, ya que, siempre te decía que programaba pero no te quería decir qué era, bueno, esta es una de las cositas que hacía pero obviamente no te podía contar jejeje, espero que te haya gustado este detalle, que espero, haya sido de tu agrado y que al menos, pude haberte sacado una sonrisita, que es lo que más me gusta :c, me gusta tu sonrisa llena de emociones, que puedes demostrar tanto con esos ojitos especiales que tienes y que, de un momento a otro, te volviste mi primer y ultimo pensamiento del dia :cc
                     </p>
 
                     <p>
